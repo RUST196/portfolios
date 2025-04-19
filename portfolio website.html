@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        
+        .sidebar {
+            height: 100%;
+            width: 120px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(9, 0, 2);
+            overflow-x: hidden;
+            text-align: center;
+        }
+        
+        .sidebar img {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 16px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .sidebar i {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        
+        .sidebar a.active {
+            background-color: #000;
+        }
+        
+        
+        .mobile-navbar {
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .mobile-navbar .nav-container {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .mobile-navbar a {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .mobile-navbar a:hover {
+            opacity: 0.6;
+        }
+        
+        
+        .main-content {
+            margin-left: 120px;
+            padding: 20px;
+        }
+        
+        
+        header {
+            text-align: center;
+            padding: 32px 0;
+        }
+        
+        .jumbo-text {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        header p {
+            margin-bottom: 20px;
+        }
+        
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        
+        .content-section {
+            padding: 64px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+        
+        .divider {
+            width: 200px;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .content-section p {
+            color: #9e9e9e;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        
+        .skill {
+            margin-top: 16px;
+        }
+        
+        .skill-label {
+            color: #9e9e9e;
+            margin-bottom: 8px;
+        }
+        
+        .skill-container {
+            width: 100%;
+            background-color: #fff;
+            margin-bottom: 16px;
+        }
+        
+        .skill-bar {
+            height: 28px;
+            background-color: #616161;
+        }
+        
+        
+        .button {
+            display: inline-block;
+            background-color: #f1f1f1;
+            color: #000;
+            padding: 12px 24px;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+        }
+        
+        .button:hover {
+            background-color: #ccc;
+        }
+        
+        .button i {
+            margin-right: 10px;
+        }
+        
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            font-size: 24px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        
+        
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            margin-bottom: 16px;
+            background-color: #333;
+            color: white;
+        }
+        
+        .form-control::placeholder {
+            color: #9e9e9e;
+        }
+        
+        
+        footer {
+            text-align: center;
+            padding: 64px 0;
+            color: #9e9e9e;
+            font-size: 24px;
+        }
+        
+        footer i {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+        footer i:hover {
+            opacity: 0.7;
+        }
+        
+        
+        @media only screen and (max-width: 600px) {
+            .sidebar {
+                display: none;
+            }
+            
+            .mobile-navbar {
+                display: block;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding-top: 50px;
+            }
+            
+            .jumbo-text {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="sidebar">
+    
+    <img src="C:\Users\dayar\Downloads\Me.jpg" alt="Profile Photo">
+    <a href="#" class="active">
+        <i class="fa fa-home"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#about">
+        <i class="fa fa-user"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#projects">
+        <i class="fa fa-eye"></i>
+        <p>PROJECTS</p>
+    </a>
+    <a href="#contact">
+        <i class="fa fa-envelope"></i>
+        <p>CONTACT</p>
+    </a>
+</nav>
+
+
+<div class="mobile-navbar">
+    <div class="nav-container">
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PHOTOS</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</div>
+
+
+<div class="main-content">
+    
+    <header id="home">
+        <h1 class="jumbo-text"><span class="hide-small">I'm</span> Daya.</h1>
+        <p>Student and Web Designer.</p>
+        <img src="C:\Users\dayar\Downloads\ryangosling.jpg" alt="Profile Photo">
+    </header>
+
+    
+    <div class="content-section" id="about">
+        <h2 class="section-title">My Name</h2>
+        <hr class="divider">
+        <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        
+        <h3 class="section-title" style="padding-top: 16px;">My Skills</h3>
+        
+        <div class="skill">
+            <p class="skill-label">Web Design</p>
+            <div class="skill-container">
+                <div class="skill-bar" style="width:85%"></div>
+            </div>
+        </div>
+        
+        <div class="skill">
+            <p class="skill-label">Photoshop</p>
+            <div class="skill-container">
+                <div class="skill-bar" style="width:80%"></div>
+            </div>
+        </div>
+        
+        <button class="button">
+            <i class="fa fa-download"></i> Download Resume
+        </button>
+    </div>
+
+    
+    <div class="content-section" id="projects">
+        
+    </div>
+
+    
+    <div class="content-section" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <hr class="divider">
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa fa-map-marker"></i> Chennai, IND
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-phone"></i> Phone: +91 15151572211
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i> Email: mail@mail.com
+            </div>
+        </div>
+        
+        <p>Let's get in touch. Send me a message:</p>
+
+        <form action="/action_page.php" target="_blank">
+            <input class="form-control" type="text" placeholder="Name" required name="Name">
+            <input class="form-control" type="text" placeholder="Email" required name="Email">
+            <input class="form-control" type="text" placeholder="Subject" required name="Subject">
+            <input class="form-control" type="text" placeholder="Message" required name="Message">
+            
+            <button class="button" type="submit">
+                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+        </form>
+    </div>
+    
+    
+    <footer>
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-snapchat"></i>
+        <i class="fa fa-pinterest-p"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+    </footer>
+
+</div>
+
+<script>
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
